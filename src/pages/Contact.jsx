@@ -31,7 +31,8 @@ export default function Contact() {
       <title>Contact Us | National Roofing Services, Dadar, Mumbai</title>
       <meta name="description" content="Call +91 98203 99467 or visit us at 8, Lallubhai Mansion, Dr. Ambedkar Road, Dadar East, Mumbai 400014 for roofing, walling and ceiling quotes." />
 
-      <PageHeader eyebrow="Contact" title="Let’s talk about your roof" intro="Call, WhatsApp, email or send the form. Whichever is easiest for you." />
+      <PageHeader eyebrow="Contact" title="Let’s talk about your roof"
+        photo="/img/photos/mumbai-skyline.webp" intro="Call, WhatsApp, email or send the form. Whichever is easiest for you." />
 
       <section className="section">
         <Container>

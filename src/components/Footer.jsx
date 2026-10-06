@@ -8,7 +8,6 @@ const year = new Date().getFullYear()
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="stripes" />
       <Container>
         <Row className="gy-5">
           <Col lg={4}>
@@ -32,16 +31,18 @@ export default function Footer() {
             <address className="footer-links">
               {company.address.map((l) => <span key={l}>{l}<br /></span>)}
               <a href={company.mobileHref}>{company.mobile}</a><br />
-              {company.phones.join(' · ')}<br />
+              {company.phones.map((ph) => <span key={ph}>{ph}<br /></span>)}
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </address>
           </Col>
         </Row>
         <div className="footer-base">
           <span>© {year} {company.name}. All rights reserved.</span>
-          <span>
-            <Link to="/about-us">About</Link> · <Link to="/clients">Clients</Link> · <Link to="/contact-us">Contact</Link>
-          </span>
+          <nav className="footer-base-links" aria-label="Footer">
+            <Link to="/about-us">About</Link>
+            <Link to="/clients">Clients</Link>
+            <Link to="/contact-us">Contact</Link>
+          </nav>
         </div>
       </Container>
     </footer>

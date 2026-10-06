@@ -35,7 +35,7 @@ export default function Header() {
       fixed="top"
       expanded={open}
       onToggle={setOpen}
-      className={`site-nav ${scrolled || open || pathname !== '/' ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}
+      className={`site-nav ${scrolled || open ? 'is-scrolled' : 'is-top'} ${hidden && !open ? 'is-hidden' : ''}`}
     >
       <Container>
         <Navbar.Brand as={Link} to="/" aria-label="National Roofing Services home">
@@ -57,7 +57,7 @@ export default function Header() {
               <div className="mega-grid">
                 {services.map((s) => (
                   <NavDropdown.Item as={Link} to={`/services/${s.slug}`} key={s.slug} className="mega-item">
-                    <img src={s.image} alt="" loading="lazy" width="56" height="56" />
+                    <img src={s.cover} alt="" loading="lazy" width="56" height="56" />
                     <span>
                       <strong>{s.name}</strong>
                       <small>{s.short}</small>

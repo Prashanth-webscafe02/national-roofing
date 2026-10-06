@@ -14,6 +14,7 @@ export default function Clients() {
       <PageHeader
         eyebrow="Clients"
         title="Who we work for"
+        photo="/img/photos/hero-space-frame.webp"
         intro="We’re committed to a client-centric approach: known manufacturers, a well-kept warehouse, and products customised to each client’s requirement."
       />
 

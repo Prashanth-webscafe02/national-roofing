@@ -17,6 +17,7 @@ export const company = {
 export const services = [
   {
     slug: 'roofing-solutions',
+    cover: '/img/photos/svc-roofing.webp',
     name: 'Roofing Solutions',
     short: 'Galvalume, PUF panels, polycarbonate and fibre glass sheets.',
     intro:
@@ -26,6 +27,7 @@ export const services = [
   },
   {
     slug: 'walling-solutions',
+    cover: '/img/photos/svc-walling.webp',
     name: 'Walling Solutions',
     short: 'Wall boards, partitions, fire-rated doors and glass.',
     intro:
@@ -35,6 +37,7 @@ export const services = [
   },
   {
     slug: 'ceiling-solutions',
+    cover: '/img/photos/svc-ceiling.webp',
     name: 'Ceiling Solutions',
     short: 'False ceilings and fire-rated ceiling systems.',
     intro:
@@ -44,6 +47,7 @@ export const services = [
   },
   {
     slug: 'everest-roofing-solutions',
+    cover: '/img/photos/svc-everest.webp',
     name: 'Everest Roofing Solutions',
     short: 'Everest AC and Hi-Tech non-asbestos sheets.',
     intro:
@@ -53,6 +57,7 @@ export const services = [
   },
   {
     slug: 'everest-pre-engineered-systems',
+    cover: '/img/photos/svc-peb.webp',
     name: 'Everest Pre Engineered Systems',
     short: 'Pre-engineered steel buildings.',
     intro:
@@ -62,6 +67,7 @@ export const services = [
   },
   {
     slug: 'dekstrip-flashing',
+    cover: '/img/photos/svc-flashing.webp',
     name: 'DEKS Dekstrip Flashing',
     short: 'Flexible, weatherproof roof flashing.',
     intro:
@@ -71,6 +77,7 @@ export const services = [
   },
   {
     slug: 'promat-passive-fire-protection',
+    cover: '/img/photos/svc-fire.webp',
     name: 'Promat Passive Fire Protection',
     short: 'Fire-rated boards, ducts, doors, sealants and steel protection.',
     intro:
@@ -382,8 +389,8 @@ export const clients = [
 ].map((name, i) => ({ name, logo: `/img/clients/cli-${i + 1}.webp`, w: logoSizes[i][0], h: logoSizes[i][1] }))
 
 export const heroSlides = [
-  { image: '/img/hero-1.webp', label: 'Tiled & sheet roofing', alt: 'Roofer fixing clay tiles on a sloped roof' },
-  { image: '/img/hero-2.webp', label: 'Shingles & membranes', alt: 'Nail gun fixing roof shingles' },
-  { image: '/img/hero-3.webp', label: 'Metal roofing', alt: 'Roofer in a hard hat installing metal sheet roofing' },
-  { image: '/img/hero-4.webp', label: 'Waterproofing', alt: 'Torch-on waterproofing membrane being laid' },
+  { image: '/img/photos/hero-metal-roof.webp', label: 'Metal roofing', alt: 'Standing-seam metal roof against a grey sky' },
+  { image: '/img/photos/hero-steel-frame.webp', label: 'Pre-engineered buildings', alt: 'Steel frame of a pre-engineered industrial building under construction' },
+  { image: '/img/photos/hero-warehouse.webp', label: 'Warehouses and sheds', alt: 'Empty warehouse with a metal sheet roof and steel trusses' },
+  { image: '/img/photos/hero-space-frame.webp', label: 'Large-span structures', alt: 'Steel space-frame roof seen from below' },
 ]

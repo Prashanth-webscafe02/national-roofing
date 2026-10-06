@@ -31,7 +31,7 @@ export default function Service() {
       <title>{`${service.title} | National Roofing Services`}</title>
       <meta name="description" content={service.intro} />
 
-      <PageHeader eyebrow="Our services" title={service.name} intro={service.intro} image={service.image} />
+      <PageHeader eyebrow="Our services" title={service.name} intro={service.intro} photo={service.cover} />
 
       <section className="section">
         <Container>
@@ -81,7 +81,7 @@ export default function Service() {
                   <span className="product-brand">{x.brand}</span>
                   <h2>{x.name}</h2>
                   <p>{x.text}</p>
-                  <span className="service-go">Details →</span>
+                  <span className="service-go">View details</span>
                 </motion.button>
               ))}
             </AnimatePresence>

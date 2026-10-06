@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import PageHeader from '../components/PageHeader.jsx'
 import Reveal from '../components/Reveal.jsx'
+import { ImageReveal } from '../components/Motion.jsx'
 import { applications, company, services, team } from '../data/site.js'
 
 export default function About() {
@@ -14,7 +15,7 @@ export default function About() {
         eyebrow={`Established ${company.founded}`}
         title="About us"
         intro="Suppliers and specialist contractors of roofing, ceiling and walling solutions, from Dadar, Mumbai."
-        image="/img/hero-3.webp"
+        photo="/img/photos/factory-aerial.webp"
       />
 
       <section className="section">
@@ -36,7 +37,8 @@ export default function About() {
               </Reveal>
             </Col>
             <Col lg={5}>
-              <Reveal delay={0.1} className="glass about-card">
+              <ImageReveal src="/img/photos/warehouse-store.webp" alt="Covered warehouse where stock is sorted before dispatch" className="about-img" />
+              <Reveal delay={0.1} className="glass about-card about-card-overlap">
                 <h3>Where our products work</h3>
                 <p>Valued for heat and fire resistance, strength and long life, our range is used in:</p>
                 <div className="chips chips-static">
@@ -49,7 +51,6 @@ export default function About() {
       </section>
 
       <section className="section services-band">
-        <div className="corrugated" aria-hidden="true" />
         <Container className="position-relative">
           <Row className="gy-4 align-items-stretch">
             <Col lg={6}>
@@ -70,7 +71,7 @@ export default function About() {
                 <h3>Our services</h3>
                 <ul className="link-list">
                   {services.map((s) => (
-                    <li key={s.slug}><Link to={`/services/${s.slug}`}>{s.name} <span>→</span></Link></li>
+                    <li key={s.slug}><Link to={`/services/${s.slug}`}>{s.name}</Link></li>
                   ))}
                 </ul>
                 <a href={company.brochure} className="btn-main mt-3" download>Download brochure (PDF)</a>

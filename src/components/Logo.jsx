@@ -7,7 +7,7 @@ export default function Logo({ light = false }) {
       </svg>
       <span className="logo-text">
         <strong>National Roofing</strong>
-        <small>Services · Est. 1944</small>
+        <small>Services, est. 1944</small>
       </span>
     </span>
   )
