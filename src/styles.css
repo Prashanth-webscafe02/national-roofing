@@ -1,8 +1,8 @@
 /* ============ Tokens ============ */
-/* "Coated steel": zinc and sheet white, graphite ink, the teal of PPGI roofing sheet, safety amber kept rare. */
+/* "Coated steel": a soft wash of the logo amber and sheet white, graphite ink, the teal of PPGI roofing sheet, safety amber kept rare. */
 :root {
-  --zinc: #eef0ee;
-  --zinc-2: #e2e6e4;
+  --zinc: #fbf5e8;
+  --zinc-2: #f4ead3;
   --white: #ffffff;
   --ink: #161c1f;
   --graphite: #1c2428;
@@ -31,7 +31,7 @@
 
 /* ============ Base ============ */
 body {
-  background: var(--zinc);
+  background: var(--zinc) linear-gradient(180deg, #fdf9f0 0%, var(--zinc) 40%, #f8efda 100%) fixed;
   color: var(--ink);
   font-family: var(--font);
   font-size: 1.0625rem;
