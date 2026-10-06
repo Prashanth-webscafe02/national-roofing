@@ -1,0 +1,27 @@
+RewriteEngine On
+
+# Old addresses -> new pages (301 keeps search rankings)
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^about-us\.php$ /about-us [R=301,L]
+RewriteRule ^clients\.php$ /clients [R=301,L]
+RewriteRule ^contact-us\.php$ /contact-us [R=301,L]
+RewriteRule ^roofing-solutions\.php$ /services/roofing-solutions [R=301,L]
+RewriteRule ^walling-solutions\.php$ /services/walling-solutions [R=301,L]
+RewriteRule ^ceiling-solutions\.php$ /services/ceiling-solutions [R=301,L]
+RewriteRule ^everest-engineered-roofing-solutions\.php$ /services/everest-roofing-solutions [R=301,L]
+RewriteRule ^everest-engineered-systems\.php$ /services/everest-pre-engineered-systems [R=301,L]
+RewriteRule ^dekstrip-flashing\.php$ /services/dekstrip-flashing [R=301,L]
+RewriteRule ^promat-passive-fire\.php$ /services/promat-passive-fire-protection [R=301,L]
+RewriteRule ^special-product\.php$ / [R=301,L]
+
+# Everything that isn't a real file (captcha.php, homemail.php, images) goes to the React app
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
